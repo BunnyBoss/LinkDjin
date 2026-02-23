@@ -56,7 +56,6 @@ This keeps the automation lightweight and simple.
 - Ubuntu (X11 session — Wayland is not supported)
 - Python 3.12+
 - Google Chrome browser
-- Conda or virtualenv (recommended)
 
 ### Python Dependencies
 
@@ -93,17 +92,10 @@ git clone https://github.com/BunnyBoss/LinkDjin
 cd LinkDjin
 ```
 
-### 2. Create Conda Environment (Recommended)
 
-```bash
-conda create -n linkdjin python=3.10
-conda activate linkdjin
-pip install -r requirements.txt
-```
+### 2. Configure Credentials
 
-### 3. Configure Credentials
-
-Create a `.env` file in the root directory:
+Create a `.env` file in the root directory (pwd):
 
 ```env
 LINKEDIN_USERNAME=your_email
@@ -118,7 +110,7 @@ LINKEDIN_PASSWORD=your_password
 2. Run the script:
 
 ```bash
-python linkdjin.py --text-post path/to/post.txt --company-id 111838940
+./linkdjin --text-post path/to/post.txt --company-id linkdin_company_id
 ```
 
 
@@ -143,7 +135,6 @@ The script will:
 
 ```
 linkdjin.py
-requirements.txt
 .env
 README.md
 ROADMAP.md
